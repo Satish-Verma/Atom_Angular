@@ -1,0 +1,40 @@
+<html>
+<head>
+
+
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myGreetCtrl" style="border: 0.1em solid black;padding:50px">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+<button ng-click="greetInEnglish()">Greet in English!</button>
+<button ng-click="greetInSpanish()">Greet in Spanish!</button>
+<button ng-click="stopGreeting()">Stop Greeting!</button>
+<div ng-if="greet" >
+   <h2 style="color:orange">{{greetingtext}}</h2>
+</div>
+ <hr/>
+<div ng-controller="myPurchaseCtrl">
+ <button ng-click="checkPurchasingStatus()">Check whether you can do shopping?</button>
+ <div ng-if="purchase" >
+    <h2 style="color:orange">{{canPurchasetext}}</h2>
+ </div>
+ <hr/>
+ <div>
+   <h3>To check the Jquery Reference, this is coming as we print $ as the proof of Jquery Loaded!</h3>
+   {{JqueryRef}}
+ </div>
+</div>
+
+</div>
+
+
+
+  <script data-main="main" src="require.js"></script>
+
+
+</body>
+</html>
